@@ -1,47 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-				<meta charset="UTF-8">
-				<title>ForumsFeed</title>
-				<style>
-								body {
-								font-family: Helvetica;
-								margin: 0;
-								}
-								
-								.header {
-								background-color: #4287f5;
-								color: white;
-								padding: 10px 20px;
-								}
-								
-								.page {
-								padding: 10px 30px;
-								}
-				</style>
-				<script src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-				<div class="header">
-								<h2>ForumsFeed</h2>
-				</div>
-				<div class="page">
-								Welcome to <b>ForumsFeed</b>! Please insert info about ForumsFeed here [...]
-								<br><br>
-								<input placeholder="Scratch username..." id="username" /> <button onclick="getworth(document.getElementById('username').value)">Measure!</button>
-<br><br><details>
-<ul>
-<li>Veteran</li>
-<li>Experienced</li>
-<li>Trusty</li>
-<li>Helper</li>
-<li>Trainee</li>
-<li>Newcomer</li>
-</ul>
-</details>
-				</div>
-</body>
+
+<body class="p-2 bg-indigo-500">
+  <div class="grid text-center justify-center">
+
+    <div class="flex w-full flex-wrap items-stretch mb-3 justify-center space-x-2">
+      <input
+        class="px-3 py-3 placeholder-white text-white relative bg-red-500 rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-50"
+        id="inputbox01" placeholder="Type Username"><button class="px-3 py-3 w-50 bg-red-500 text-white rounded"
+        onClick="whatEverFunction" id="button01">Go</button>
+    </div>
+  </div>
+
 </html>
-
-
-	
