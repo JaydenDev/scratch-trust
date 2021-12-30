@@ -1,19 +1,70 @@
-<html>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js"></script>
+				<meta charset="UTF-8">
+				<title>ForumsFeed</title>
+				<style>
+								body {
+								font-family: Helvetica;
+								margin: 0;
+								}
+								
+								.header {
+								background-color: #4287f5;
+								color: white;
+								padding: 10px 20px;
+								}
+								
+								.page {
+								padding: 15px 20px;
+								}
+
+          input, button {
+          border-radius: 20px;
+          border: 1.5px solid lightgrey;
+          padding: 5px;
+          }
+
+          button {
+          background-color: #4287f5;
+          color: white;
+          border: 1.5px solid #2b60b5;
+          }
+				</style>
+				<script src="script.js"></script>
 </head>
-
-<body class="p-2 bg-indigo-500">
-  <div class="grid text-center justify-center">
-
-    <div class="flex w-full flex-wrap items-stretch mb-3 justify-center space-x-2">
-      <input
-        class="px-3 py-3 placeholder-white text-white relative bg-red-500 rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-50"
-        id="inputbox01" placeholder="Type Username"><button class="px-3 py-3 w-50 bg-red-500 text-white rounded"
-        onClick="getWorth()" id="button01">Go</button>
-    </div>
-  </div>
-
+<body>
+				<div class="header">
+								<h1>ForumsFeed</h1>
+				</div>
+				<div class="page">
+								Welcome to <b>ForumsFeed</b>! ForumsFeed is a simple tool to measure your (or someone else's) level of trustworthyness on the <a href="https://scratch.mit.edu/discuss">Scratch Discussion Forums</a>.
+								<br><br>
+								<input placeholder="Scratch username..." id="username" /> <button onclick="getworth(document.getElementById('username').value)">Measure!</button>
+								<hr style="border: 1px dotted lightgrey;margin-top:20px;margin-bottom:20px" />
+								<b>How does this work?</b>
+								<br>
+								Using <a href="https://scratchdb.lefty.one">ScratchDB</a>, we take the post count of the requested user and return the level based on the number of posts the user has.<br><br>
+								<b>How many levels are there?</b>
+								<br>
+								There are currently <u>7 levels</u> measured. They are decided based on your post count. Which level are you?
+								<ul>
+												<li>Veteran - 30,000+ Posts</li>
+												<li>Experienced - 10,000+ Posts</li>
+												<li>Trusty - 5,000+ Posts</li>
+												<li>Helper - 1,000+ Posts</li>
+								  			<li>Assistive Trainee - 500+ Posts</li>
+			  							 	<li>Trainee - 100+ Posts</li>
+								 				<li>Newcomer - 0+ Posts</li>
+								</ul>
+								<b>Can i contribute?</b>
+								<br>
+								<i>Yes!</i> We have a lot of issues to fix, so we really do appreciate pull requests and contributors. <a href="https://github.com/LankyBox01/scratch-trust/">https://github.com/LankyBox01/scratch-trust/</a>
+				</div>
+</body>
 </html>
+
+
+
+	

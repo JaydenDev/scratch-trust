@@ -1,6 +1,5 @@
-function getWorth() {
-username = document.getElementById("inputbox01").value
-fetch("https://scratchdb.lefty.one/v3/forum/user/info/" + username)
+function getworth(usernam) {
+fetch("https://scratchdb.lefty.one/v3/forum/user/info/" + usernam)
     .then(response => response.json())
     .then(data => waitForElement(data.counts.total.count))
 }
@@ -9,21 +8,25 @@ function waitForElement(b){
        setTimeout(waitForElement, 250);
     }else{
        if(b > 30000) {
-       alert("Veteran!");
+       alert(`Veteran - ${b} posts!`);
        }else{
        if(b > 10000) {
-       alert("Experienced!");
+       alert(`Experienced! - ${b} posts!`);
        }else{
        if(b > 5000) {
-       alert("Trusty!");
+       alert(`Trusty - ${b} posts!`);
        }else{
        if(b > 1000) {
-       alert("Helper!");
+       alert(`Helper - ${b} posts!`);
+       }else{
+       if(b > 500) {
+       alert(`Assistive Trainee - ${b} posts!`);
        }else{
        if(b > 100) {
-       alert("Trainee!");
+       alert(`Trainee - ${b} posts!`);
        }else{
-       alert("Newcomer!");
+       alert(`Newcomer - ${b} posts!`);
+       }
        }
        }
        }
