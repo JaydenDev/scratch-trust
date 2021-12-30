@@ -1,5 +1,5 @@
-function getworth() {
-username = document.getElementByID("inputbox01").value
+function getWorth() {
+username = document.getElementById("inputbox01").value
 fetch("https://scratchdb.lefty.one/v3/forum/user/info/" + username)
     .then(response => response.json())
     .then(data => waitForElement(data.counts.total.count))
