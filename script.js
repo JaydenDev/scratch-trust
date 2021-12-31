@@ -34,11 +34,3 @@ function waitForElement(b){
        }
     }
 }
-
-function scratchDark() {
-    window.location.replace("/scratch-dark.html");
-}
-
-function scratchLight() {
-    window.location.replace("/scratch-light.html");
-}
